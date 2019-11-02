@@ -24,6 +24,9 @@ class BookInput extends InputType
             'name' => [
                 'type' => Type::string(),
             ],
+            'publisher' => [
+                'type' => GraphQL::type('PublisherInput'),
+            ],
             'author' => [
                 'type' => GraphQL::type('AuthorInput'),
             ],

@@ -100,6 +100,7 @@ return [
             ],
             'mutation' => [
                 'SaveAuthor' => App\GraphQL\Mutations\SaveAuthor::class,
+                'SavePublisher' => App\GraphQL\Mutations\SavePublisher::class,
             ],
             'middleware' => [],
             'method'     => ['get', 'post'],
@@ -118,6 +119,7 @@ return [
     'types' => [
         'AuthorInput' => App\GraphQL\Inputs\AuthorInput::class,
         'BookInput' => App\GraphQL\Inputs\BookInput::class,
+        'PublisherInput' => App\GraphQL\Inputs\PublisherInput::class,
     ],
 
     // The types will be loaded on demand. Default is to load all types on each request

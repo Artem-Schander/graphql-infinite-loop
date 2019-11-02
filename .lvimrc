@@ -1,0 +1,14 @@
+let g:test#php#phpunit#executable = 'docker exec -it $(docker ps -n=-1 -q --filter name=phpfpm --format="{{.ID}}") vendor/bin/phpunit --stop-on-failure'
+" let g:test#php#phpunit#executable = 'docker exec -it $(docker ps -n=-1 -q --filter name=phpfpm --format="{{.ID}}") vendor/bin/phpunit'
+" let g:test#php#phpunit#executable = 'docker-compose exec phpfpm vendor/bin/phpunit --colors=always'
+
+" function! DockerTransform(cmd) abort
+"   " return test command wrapped in docker stuff
+" endfunction
+
+" let g:test#custom_transformations = {'docker': function('DockerTransform')}
+" let g:test#transformation = 'docker'
+
+" Drop Vdebug settings at the end of the file "
+let g:vdebug_options['path_maps'] = {'/var/www/html': '/Users/artemschander/Code/city-offer/api/src'}
+let g:vdebug_options['port'] = '9001'
